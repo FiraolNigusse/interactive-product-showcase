@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Section -->
+    <section class="home-section" id="home">
+        <h1>Welcome to Our Electronics Store</h1>
+        <p>Find the best and latest electronic products here!</p>
+        <div class="welcome-image">
+            <img src="Images/welcome.jpg" alt="Welcome to our store">
+        </div>
+        <button id="explore-products">Explore Products</button>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="/Images/logo.jpg" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Product Showcase Section -->
+    <section class="product-showcase" id="products">
+        <h1>Our Products</h1>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Modal for Product Details -->
+     <div class="modal" id="modal">
+     <div class="modal-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <div class="modal-details">
+            <img id="modal-image" src="" alt="Product Image">
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <p id="modal-price"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Fill out the form below:</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="contact-message"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

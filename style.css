@@ -1,0 +1,462 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Ensure sections are stacked */
+section {
+    padding: 80px 20px;
+    min-height: 100vh; /* Full screen height */
+    text-align: center;
+}
+
+/* Add space below navbar */
+body {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    padding-top: 60px;
+}
+
+
+/* 🎨 General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🏡 Home Section */
+.home-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🏆 Main Heading */
+.home-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 💬 Subtitle */
+.home-section p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.welcome-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-image img {
+    width: 80%; /* Adjust image size */
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 🚀 Call-to-Action Button */
+#explore-products {
+    background: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: bounce 2s infinite;
+}
+
+/* 🎯 Button Hover Effect */
+#explore-products:hover {
+    background: #ffb700;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Button Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* 🌟 Emojis Inside Text */
+.home-section h1::before {
+    content: "🌟 ";
+}
+
+.home-section h1::after {
+    content: " ✨";
+}
+
+.home-section p::before {
+    content: "📢 ";
+}
+
+/* 🎨 Responsive Design */
+@media (max-width: 768px) {
+    .home-section {
+        padding: 80px 15px;
+    }
+
+    .home-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-section p {
+        font-size: 1.1rem;
+    }
+
+    #explore-products {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
+
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-left: -50px;
+}
+
+/* 🏆 Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* 📝 Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+/* 🔥 Colorful Link Styles */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 🎨 Add Emojis to Links */
+.nav-links li:nth-child(1) a::before { content: "🏠"; }  /* Home */
+.nav-links li:nth-child(2) a::before { content: "🛒"; }  /* Shop */
+.nav-links li:nth-child(3) a::before { content: "💬"; }  /* Contact */
+.nav-links li:nth-child(4) a::before { content: "📞"; }  /* Support */
+
+/* 🎯 Hover Effects */
+.nav-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Navigation */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #8a6aff;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Product Showcase */
+.product-showcase {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 90%; /* Adjust width based on screen size */
+    width: 500px;
+    max-height: 80vh; /* Prevents modal from exceeding viewport height */
+    overflow-y: auto; /* Enables scrolling if content exceeds modal size */
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-content img {
+    max-width: 100%; /* Ensures image fits within modal */
+    height: auto;
+    border-radius: 8px;
+}
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%; /* Use more screen width on small devices */
+        max-height: 90vh;
+    }
+}
+
+
+/* Show modal only when active */
+.modal.active {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: black;
+}
+
+
+/* 📞 Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    max-width: 700px;
+    margin: 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 📝 Contact Heading */
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* 💌 Add an emoji before heading */
+.contact-section h2::before {
+    content: "📩 ";
+}
+
+/* 📄 Contact Form */
+.contact-section form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ✍️ Input & Textarea Styles */
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🎨 Input Background */
+.contact-section input {
+    background: #fff;
+    color: #333;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section textarea {
+    background: #fff;
+    color: #333;
+    resize: vertical;
+    height: 100px;
+}
+
+/* ✨ Focus Effect */
+.contact-section input:focus,
+.contact-section textarea:focus {
+    transform: scale(1.02);
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+/* 🎯 Submit Button */
+.contact-section button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 🚀 Hover Effect */
+.contact-section button:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
+/* 🌍 Social Media Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* 🎨 Social Media Hover */
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .contact-section form {
+        max-width: 100%;
+    }
+}
